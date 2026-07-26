@@ -1,15 +1,13 @@
 %define upstream_name    ORLite-Statistics
-%define upstream_version 0.03
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	6
+Version:	0.03
+Release:	7
 
 Summary:	Statistics enhancement package for ORLite
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://svn.ali.as/cpan/trunk/ORLite-Statistics
-Source0:	https://cpan.metacpan.org/authors/id/A/AD/ADAMK/ORLite-Statistics-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/A/AD/ADAMK/ORLite-Statistics-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -24,7 +22,7 @@ This is an enhancement module for ORLite table classes, designed to provide
 easy integration with the the Statistics::Base manpage module.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
